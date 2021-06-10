@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dataread</title>
+</head>
+<body>
+    <p>かかった時間は{{time}}秒です。</p>
+    <p>計測日数は、{{day_len}}です。</p>
+    <p>ティッカーシンボル</p>
+    {% for i in data.keys %}
+    　　　<span>{{i}}</span>
+    {% endfor %}
+    
+    <form action="{% url 'hundred' %}"method="post">
+        {% csrf_token %}
+        <input type="submit" value="１００日移動平均の計算に移る">
+    </form>
+     
+</body>
+</html>

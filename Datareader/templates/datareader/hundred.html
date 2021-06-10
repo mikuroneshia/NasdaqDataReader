@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dataread</title>
+</head>
+<body>
+    <p>かかった時間は{{time}}秒です。</p>
+    
+    <form action="{% url 'twohundred' %}"method="post">
+        {% csrf_token %}
+        <input type="submit" value="２００日移動平均に移る。">
+    </form>
+     
+</body>
+</html>

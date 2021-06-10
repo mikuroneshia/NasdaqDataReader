@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charaset='utf-8'>
+        <title>dataread</title>
+    </head>
+    <body>
+        <h3>期間の入力</h3>
+        <h6>入力例：2020/2/23</h6>
+        <form action="{% url 'admin' %}"method="post"}>
+            {% csrf_token %}
+            <label for="start">start:</label>
+            <input type='text' name='start'>
+            <label for='end'>end:</label>
+            <input type='text' name='end'>
+            <input type='submit' value='click'>
+        </form>
+    </body>
+</html>
